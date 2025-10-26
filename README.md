@@ -4,7 +4,12 @@ An innovative and immersive creative portfolio showcasing my journey in software
 
 ## 🚀 Live Demo
 
-[View Portfolio](https://your-deployment-url.vercel.app) <!-- Update with your actual deployment URL -->
+[View Portfolio](https://portfolio-oiw8.vercel.app)
+
+### 🌐 Deployment URLs
+
+- **Production:** [portfolio-oiw8.vercel.app](https://portfolio-oiw8.vercel.app)
+- **Preview (Main Branch):** [portfolio-oiw8-git-main-kritipuri28-2596s-projects.vercel.app](https://portfolio-oiw8-git-main-kritipuri28-2596s-projects.vercel.app)
 
 ## 👩‍💻 About Me
 
