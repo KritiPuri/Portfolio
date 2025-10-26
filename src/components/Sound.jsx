@@ -5,8 +5,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 const Modal = ({ onClose, toggle, handleNo }) => {
+  // Ensure the modal element exists
+  const modalElement = document.getElementById("my-modal");
+  if (!modalElement) return null;
+
   return createPortal(
-    <div className="fixed inset-0 bg-background/60 backdrop-blur-sm flex items-center justify-center">
+    <div className="fixed inset-0 bg-background/60 backdrop-blur-sm flex items-center justify-center z-[100]">
       <div
         className="bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px]
             py-8 px-6 xs:px-10 sm:px-16 rounded shadow-glass-inset text-center space-y-8
@@ -54,37 +58,42 @@ const Sound = () => {
   useEffect(() => {
     const consent = localStorage.getItem("musicConsent");
     const consentTime = localStorage.getItem("consentTime");
-
-    if (
-      consent &&
-      consentTime &&
-      new Date(consentTime).getTime() + 3 * 24 * 60 * 60 * 1000 > new Date()
-    ) {
-      setIsPlaying(consent === "true");
-
-      if (consent === "true") {
-        ["click", "keydown", "touchstart"].forEach((event) =>
-          document.addEventListener(event, handleFirstUserInteraction)
-        );
-      }
-    } else {
-      setShowModal(true);
-    }
     
-    // Cleanup function
-    return () => {
-      ["click", "keydown", "touchstart"].forEach((event) =>
-        document.removeEventListener(event, handleFirstUserInteraction)
-      );
-    };
-  }, [handleFirstUserInteraction]);
+    // Check if consent exists and is still valid (within 3 days)
+    const isConsentValid = consent && consentTime && 
+      new Date(consentTime).getTime() + 3 * 24 * 60 * 60 * 1000 > new Date();
+
+    if (!isConsentValid) {
+      setShowModal(true);
+      return;
+    }
+
+    // Apply the saved consent
+    const shouldPlay = consent === "true";
+    setIsPlaying(shouldPlay);
+
+    if (shouldPlay) {
+      const events = ["click", "keydown", "touchstart"];
+      events.forEach(event => document.addEventListener(event, handleFirstUserInteraction));
+      
+      return () => {
+        events.forEach(event => document.removeEventListener(event, handleFirstUserInteraction));
+      };
+    }
+  }, []);
 
   const handleNo = () => {
-    setIsPlaying(false);
-    audioRef.current.pause();
-    localStorage.setItem("musicConsent", "false");
-    localStorage.setItem("consentTime", new Date().toISOString());
-    setShowModal(false);
+    try {
+      setIsPlaying(false);
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+      localStorage.setItem("musicConsent", "false");
+      localStorage.setItem("consentTime", new Date().toISOString());
+      setShowModal(false);
+    } catch (error) {
+      console.error("Error handling No click:", error);
+    }
   };
 
   const toggle = () => {
