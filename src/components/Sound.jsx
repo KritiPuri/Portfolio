@@ -70,7 +70,14 @@ const Sound = () => {
     } else {
       setShowModal(true);
     }
-  }, []);
+    
+    // Cleanup function
+    return () => {
+      ["click", "keydown", "touchstart"].forEach((event) =>
+        document.removeEventListener(event, handleFirstUserInteraction)
+      );
+    };
+  }, [handleFirstUserInteraction]);
 
   const toggle = () => {
     const newState = !isPlaying;

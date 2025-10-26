@@ -1,57 +1,73 @@
-# Next.js Creative Portfolio Tutorial: Build Amazing Portfolio Website with Next.js, Three.js, and Tailwind CSS 🔥
----
-# ⭐DO NOT FORGET TO STAR THIS REPO⭐
----
-## Resources Used in This Project
+# Kriti Puri's Portfolio ✨
 
-#### 3D Models
+An innovative and immersive creative portfolio showcasing my journey in software development. Built with cutting-edge web technologies to deliver stunning visual experiences and seamless interactions.
 
-- ["Tim Mckee - Boy Wizard"](https://skfb.ly/6YATu) by [elbertwithane is licensed under Creative Commons Attribution ](http://creativecommons.org/licenses/by/4.0/).
-- ["Stylized wizard hat"](https://skfb.ly/ozxOQ) by [Enkarra is licensed under Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
-- ["Wizard Staff"](https://skfb.ly/6QYZw) by [Toymancer Studio is licensed under Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
+## 🚀 Live Demo
 
-#### AI Images
+[View Portfolio](https://your-deployment-url.vercel.app) <!-- Update with your actual deployment URL -->
 
-- Created with the help of [Playground AI](https://playgroundai.com/)
+## 👩‍💻 About Me
 
-#### Github Stats & Details
+Software developer passionate about creating impactful solutions. Experienced in building full-stack applications ranging from healthcare management systems to real-time collaboration tools.
 
-- [Github ReadMe Stats](https://github.com/anuraghazra/github-readme-stats)
-- [Skills Icons](https://github.com/tandpfun/skill-icons)
-- [Github Readme Streak Stats](https://github.com/denvercoder1/github-readme-streak-stats)
+## 🛠️ Tech Stack
 
-#### Development Resources
+- **Framework:** Next.js 14
+- **Styling:** Tailwind CSS
+- **3D Graphics:** Three.js, React Three Fiber
+- **Animations:** Framer Motion
+- **Forms:** React Hook Form, EmailJS
+- **UI Components:** Lucide Icons
+- **Notifications:** Sonner
 
-- Fonts from [Google Fonts](https://fonts.google.com/) <br />
-- Icons from [Lucide Icons](https://lucide.dev/) <br />
-- Notifications from [Sonner](https://sonner.emilkowal.ski/) <br />
-- Form created using [react-hook-form](https://react-hook-form.com/) <br />
-- Animations using [framer-motion](https://www.framer.com/motion/) <br />
-- Emails using [Emailjs](https://www.emailjs.com/) <br />
-- Convert 3d models to JSX using [Gltf JSX](https://github.com/pmndrs/gltfjsx)
+## 📂 Featured Projects
 
-#### Audio 
+- **MediTrack** - Healthcare Management System
+- **PyMeet** - Real-time Online Meeting App
+- **Personal Finance Tracker** - Financial management tool
+- **NoteVault** - Secure note-taking application
+- **Bookstore Ordering System** - E-commerce platform
 
-- Music by <a href="https://pixabay.com/users/shidenbeatsmusic-25676252/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=20772">Shiden Beats Music</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=20772">Pixabay</a>
+## 💼 Experience
 
----
+- **Software Development Intern** @ Hibiscustech GR Pvt. Ltd. (Jul–Sep 2025)
+- **Front-End Development Intern** @ Takyon Networks Limited (Jun–Jul 2025)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🚀 Getting Started
 
-## Getting Started
-
-First, install the dependencies and run the development server:
+### Installation
 
 ```bash
-npm run install # to install all dependencies
-
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+
+### Build for Production
+
+```bash
+npm run build
+npm run start
+```
+
+## 📧 Contact
+
+- **Email:** kritipuri28@gmail.com
+- **LinkedIn:** [Kriti Puri](https://www.linkedin.com/in/kriti-puri-b38bab26b/)
+
+
+## 📝 Credits
+
+- 3D Models from [Sketchfab](https://sketchfab.com/) (Creative Commons)
+- Background Music from [Pixabay](https://pixabay.com/music/)
+- GitHub Stats from [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)
+
+---
+
+

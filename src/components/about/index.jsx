@@ -1,6 +1,7 @@
 import React from "react";
 import ItemLayout from "./ItemLayout";
 import Link from "next/link";
+import Image from "next/image";
 
 const AboutDetails = () => {
   return (
@@ -20,7 +21,7 @@ const AboutDetails = () => {
             building MediTrack, a comprehensive healthcare management system, to 
             crafting PyMeet for seamless virtual collaboration, I transform complex 
             challenges into elegant digital experiences. With expertise in full-stack 
-            development, I've engineered personal finance trackers, secure note-taking 
+            development, I&apos;ve engineered personal finance trackers, secure note-taking 
             applications like NoteVault, and efficient bookstore ordering systems. 
             Wielding modern frameworks like React.js, Next.js, and Python, I create 
             robust, scalable applications that blend functionality with intuitive design. 
@@ -48,38 +49,46 @@ const AboutDetails = () => {
         <ItemLayout
           className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}
         >
-          <img
+          <Image
             className="w-full h-auto"
             src="https://github-readme-stats.vercel.app/api/top-langs?username=KritiPuri&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
-            alt="language Stats"
-            loading="lazy"
+            alt="Language Stats"
+            width={500}
+            height={300}
+            priority
           />
         </ItemLayout>
 
         <ItemLayout className={"col-span-full md:col-span-8 !p-0"}>
-          <img
+          <Image
             className="w-full h-auto"
             src="https://github-readme-stats.vercel.app/api?username=KritiPuri&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
             alt="Git Stats"
-            loading="lazy"
+            width={800}
+            height={300}
+            priority
           />
         </ItemLayout>
 
         <ItemLayout className={"col-span-full"}>
-          <img
+          <Image
             className="w-full h-auto"
             src={`https://skillicons.dev/icons?i=arduino,bootstrap,c,cpp,css,git,github,html,js,linux,nextjs,nodejs,npm,react,replit,sass,tailwind,threejs,ubuntu,vite,vscode,windows,wordpress`}
-            alt="CodeBucks"
-            loading="lazy"
+            alt="Skills"
+            width={1200}
+            height={100}
+            priority
           />
         </ItemLayout>
 
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
-            <img
+            <Image
               className="w-full h-auto"
               src="https://leetcard.jacoblin.cool/kriti_puri?theme=dark&font=Syne%20Tactile&ext=heatmap"
-              alt="leetcode"
-              loading="lazy"
+              alt="LeetCode Stats"
+              width={600}
+              height={300}
+              priority
             />
         </ItemLayout>
       </div>
