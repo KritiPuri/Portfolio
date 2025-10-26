@@ -4,7 +4,7 @@ import { Volume2, VolumeX } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-const Modal = ({ onClose, toggle }) => {
+const Modal = ({ onClose, toggle, handleNo }) => {
   return createPortal(
     <div className="fixed inset-0 bg-background/60 backdrop-blur-sm flex items-center justify-center">
       <div
@@ -21,7 +21,7 @@ const Modal = ({ onClose, toggle }) => {
             Yes
           </button>
           <button
-            onClick={onClose}
+            onClick={handleNo}
             className="px-4 py-2 border border-accent/30 border-solid hover:shadow-glass-sm rounded"
           >
             No
@@ -79,6 +79,14 @@ const Sound = () => {
     };
   }, [handleFirstUserInteraction]);
 
+  const handleNo = () => {
+    setIsPlaying(false);
+    audioRef.current.pause();
+    localStorage.setItem("musicConsent", "false");
+    localStorage.setItem("consentTime", new Date().toISOString());
+    setShowModal(false);
+  };
+
   const toggle = () => {
     const newState = !isPlaying;
     setIsPlaying(!isPlaying);
@@ -90,7 +98,7 @@ const Sound = () => {
   return (
     <div className="fixed top-4 right-2.5 xs:right-4 z-50 group">
       {showModal && (
-        <Modal onClose={() => setShowModal(false)} toggle={toggle} />
+        <Modal onClose={() => setShowModal(false)} toggle={toggle} handleNo={handleNo} />
       )}
 
       <audio ref={audioRef} loop>

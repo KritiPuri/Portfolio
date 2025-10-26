@@ -56,6 +56,8 @@ const AboutDetails = () => {
             width={500}
             height={300}
             priority
+            loading="eager"
+            unoptimized={true}
           />
         </ItemLayout>
 
@@ -67,6 +69,8 @@ const AboutDetails = () => {
             width={800}
             height={300}
             priority
+            loading="eager"
+            unoptimized={true}
           />
         </ItemLayout>
 
@@ -78,6 +82,8 @@ const AboutDetails = () => {
             width={1200}
             height={100}
             priority
+            loading="eager"
+            unoptimized={true}
           />
         </ItemLayout>
 
