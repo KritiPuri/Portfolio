@@ -90,11 +90,13 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
             <Image
               className="w-full h-auto"
-              src="https://leetcard.jacoblin.cool/kriti_puri?theme=dark&font=Syne%20Tactile&ext=heatmap"
+              src="https://leetcard.jacoblin.cool/kriti_puri?theme=dark&font=Syne%20Tactile&ext=heatmap&cache=0"
               alt="LeetCode Stats"
               width={600}
               height={300}
               priority
+              loading="eager"
+              unoptimized={true}
             />
         </ItemLayout>
       </div>
